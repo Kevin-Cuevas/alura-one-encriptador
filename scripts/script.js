@@ -35,6 +35,24 @@ const encrypt = function (text) {
   }
 
   console.log(result);
+  return result;
 };
 
-encrypt(`Hola como estas`); // Hoberlai cobermober enterstais
+const decrypt = function (text) {
+  const result = text
+    .replaceAll(`ai`, `a`)
+    .replaceAll(`enter`, `e`)
+    .replaceAll(`imes`, `i`)
+    .replaceAll(`ober`, `o`)
+    .replaceAll(`ufat`, `u`);
+
+  console.log(result);
+  return result;
+};
+
+// & tests
+// encrypt(`Hola como estas`); // Hoberlai cobermober enterstais
+// decrypt(`Hoberlai cobermober enterstais`);
+
+// encrypt(`imes fue a la guerra`); //imesmenters fufatenter ai lai gufatenterrrai
+// decrypt(`imesmenters fufatenter ai lai gufatenterrrai`);
