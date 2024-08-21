@@ -4,9 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador 🔒</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
   <body>
+    <!-- HTML -->
+    <main>
+      <!-- * -->
+      <img class="main-logo" src="./assets/logo.png" alt="alura's logo" />
+
+      <!-- * -->
+      <div class="main-app">
+        <textarea
+          class="main-app-input"
+          type="text"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+
+        <p class="main-app-warning">⚠️ Solo letras minusculas y sin acentos</p>
+
+        <div class="main-app-btns">
+          <button class="main-app-btn-encrypt">Encriptar</button>
+          <button class="main-app-btn-decrypt">Desencriptar</button>
+        </div>
+      </div>
+
+      <!-- * -->
+      <aside class="main-aside">
+        <img
+          class="main-aside-hero"
+          src="./assets/hero.png"
+          alt="alura's hero image"
+        />
+
+        <p>
+          <strong class="main-aside-strong"
+            >Ningun mensaje fue encontrado</strong
+          >
+        </p>
+        <p class="main-aside-text">
+          Ingresa el texto que deseas encriptar o desencriptar
+        </p>
+      </aside>
+    </main>
+
     <!-- Script -->
     <script src="./scripts/script.js"></script>
   </body>
