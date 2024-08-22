@@ -11,37 +11,102 @@ body {
   height: 100%;
 }
 
+/* * General */
+.main-app,
+.main-aside {
+  height: 100%;
+}
+
+/* * Logo */
+.main-logo {
+  width: 80px;
+}
+
 /* * Main Container */
 main {
-  border: 2px solid black;
-  /* Rules */
   margin: 40px;
-  height: 90%;
-
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  border-radius: 10px;
 }
 
 /* * Main App */
 .main-app {
-  border: 2px solid black;
-
-  /* Rules */
-  width: 600px;
-  height: 100%;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  flex-basis: 70%;
 }
 
 .main-app-input {
-  height: 80%;
+  height: 70%;
   width: 100%;
   resize: none;
-  border: none;
-  padding: 5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #0a3871;
 }
 
 .main-app-input::placeholder {
-  color: #0a3871ed;
+  color: #b0b0b0;
+}
+
+/* * Buttons */
+.main-app-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.main-app-btn-encrypt,
+.main-app-btn-decrypt {
+  width: 48%;
+  padding: 15px;
+  font-size: 16px;
   font-family: "Inter", sans-serif;
-  font-size: 32;
+  color: white;
+  background-color: #0a3871;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-app-btn-decrypt {
+  background-color: #aaa;
+}
+
+/* * Aside */
+.main-aside {
+  width: 40%;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-aside-hero {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.main-aside-strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a3871;
+}
+
+.main-aside-text {
+  font-size: 16px;
+  color: #555;
 }
