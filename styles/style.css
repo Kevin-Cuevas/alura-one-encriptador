@@ -74,7 +74,8 @@ main {
 }
 
 .main-app-btn-encrypt,
-.main-app-btn-decrypt {
+.main-app-btn-decrypt,
+.main-aside-btn {
   width: 48%;
   padding: 15px;
   font-size: 16px;
@@ -103,6 +104,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .main-aside-hero {
@@ -119,6 +121,7 @@ main {
 .main-aside-text {
   font-size: 16px;
   color: #555;
+  margin-bottom: 10px;
 }
 
 .hide {

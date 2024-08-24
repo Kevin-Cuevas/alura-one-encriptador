@@ -13,6 +13,7 @@ const appText = document.querySelector(`.main-aside-text`);
 
 const btnEncrypt = document.querySelector(`.main-app-btn-encrypt`);
 const btnDecrypt = document.querySelector(`.main-app-btn-decrypt`);
+const btnCopy = document.querySelector(`.main-aside-btn`);
 
 const asideHero = document.querySelector(`.main-aside-hero`);
 const asideStrong = document.querySelector(`.main-aside-strong`);
@@ -69,6 +70,9 @@ btnEncrypt.addEventListener(`click`, function () {
     asideHero.classList.add(`hide`);
     asideStrong.classList.add(`hide`);
 
+    // & Show copy btn
+    btnCopy.classList.remove(`hide`);
+
     // & Display the encrypted text
     appText.textContent = encrypt(userText);
   }
@@ -83,7 +87,24 @@ btnDecrypt.addEventListener(`click`, function () {
     asideHero.classList.add(`hide`);
     asideStrong.classList.add(`hide`);
 
+    // & Show copy btn
+    btnCopy.classList.remove(`hide`);
+
     // & Display the encrypted text
     appText.textContent = decrypt(userText);
   }
 });
+
+async function copyTextToClipboard() {
+  try {
+    await navigator.clipboard.writeText(appText.textContent);
+    console.log("Text copied to clipboard");
+  } catch (err) {
+    console.error("Failed to copy text: ", err);
+  }
+}
+
+// Ejemplo de uso:
+copyTextToClipboard("Hola, Mundo!");
+
+btnCopy.addEventListener(`click`, copyTextToClipboard);
