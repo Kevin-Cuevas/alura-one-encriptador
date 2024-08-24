@@ -120,3 +120,42 @@ main {
   font-size: 16px;
   color: #555;
 }
+
+/* * Media Queries */
+@media (max-width: 1200px) {
+  main {
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+  .main-app,
+  .main-aside {
+    width: 100%;
+  }
+
+  .main-aside-hero {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    margin: 20px;
+  }
+
+  .main-app-input {
+    height: 50%;
+  }
+
+  .main-app-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-app-btn-encrypt,
+  .main-app-btn-decrypt {
+    width: 100%;
+  }
+}

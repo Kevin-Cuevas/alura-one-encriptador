@@ -49,10 +49,3 @@ const decrypt = function (text) {
   console.log(result);
   return result;
 };
-
-// & tests
-// encrypt(`Hola como estas`); // Hoberlai cobermober enterstais
-// decrypt(`Hoberlai cobermober enterstais`);
-
-// encrypt(`imes fue a la guerra`); //imesmenters fufatenter ai lai gufatenterrrai
-// decrypt(`imesmenters fufatenter ai lai gufatenterrrai`);
