@@ -104,7 +104,4 @@ async function copyTextToClipboard() {
   }
 }
 
-// Ejemplo de uso:
-copyTextToClipboard("Hola, Mundo!");
-
 btnCopy.addEventListener(`click`, copyTextToClipboard);
