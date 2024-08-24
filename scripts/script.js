@@ -7,6 +7,16 @@
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
+// * DOM Elements
+const appInput = document.querySelector(`.main-app-input`);
+const appText = document.querySelector(`.main-aside-text`);
+
+const btnEncrypt = document.querySelector(`.main-app-btn-encrypt`);
+const btnDecrypt = document.querySelector(`.main-app-btn-decrypt`);
+
+const asideHero = document.querySelector(`.main-aside-hero`);
+const asideStrong = document.querySelector(`.main-aside-strong`);
+
 // * Functions
 const encrypt = function (text) {
   let result = "";
@@ -49,3 +59,31 @@ const decrypt = function (text) {
   console.log(result);
   return result;
 };
+
+// * Encrypt button
+btnEncrypt.addEventListener(`click`, function () {
+  const userText = appInput.value;
+
+  if (userText) {
+    // & Hide the hero and strong
+    asideHero.classList.add(`hide`);
+    asideStrong.classList.add(`hide`);
+
+    // & Display the encrypted text
+    appText.textContent = encrypt(userText);
+  }
+});
+
+// * Decrypt button
+btnDecrypt.addEventListener(`click`, function () {
+  const userText = appInput.value;
+
+  if (userText) {
+    // & Hide the hero and strong
+    asideHero.classList.add(`hide`);
+    asideStrong.classList.add(`hide`);
+
+    // & Display the encrypted text
+    appText.textContent = decrypt(userText);
+  }
+});

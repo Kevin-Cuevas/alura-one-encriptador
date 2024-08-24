@@ -121,6 +121,10 @@ main {
   color: #555;
 }
 
+.hide {
+  display: none;
+}
+
 /* * Media Queries */
 @media (max-width: 1200px) {
   main {
